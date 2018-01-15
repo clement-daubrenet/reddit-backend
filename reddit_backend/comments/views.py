@@ -23,7 +23,6 @@ def get_comments(post_id):
 @io.marshal_with(CommentSchema)
 def add_commnents(comment):
     comment.id = str(uuid4())
-    # Store the new topic in the database
     db.session.add(comment)
     db.session.commit()
     return comment

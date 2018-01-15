@@ -1,8 +1,6 @@
 from .. import db
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy import ForeignKey
-from sqlalchemy.orm import relationship
-from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String, SmallInteger
+from sqlalchemy import Column, String
 
 
 class Topic(db.Model):

@@ -13,7 +13,6 @@ app = Blueprint('posts', __name__, url_prefix='/posts')
 @io.marshal_with(PostSchema)
 def add_post(post):
     post.id = str(uuid4())
-    # Store the new post in the database
     db.session.add(post)
     db.session.commit()
     return post
